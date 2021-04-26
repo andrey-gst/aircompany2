@@ -5,7 +5,7 @@ import models.ExperimentalTypes;
 
 public class experimentalPlane extends Plane{
 
-    private ExperimentalTypes type;
+    private final ExperimentalTypes type;
     private ClassificationLevel classificationLevel;
 
     public experimentalPlane(String model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, ExperimentalTypes type, ClassificationLevel classificationLevel) {
@@ -37,5 +37,9 @@ public class experimentalPlane extends Plane{
         return "experimentalPlane{" +
                 "model='" + model + '\'' +
                 '}';
+    }
+
+    public ExperimentalTypes getType() {
+        return type;
     }
 }
